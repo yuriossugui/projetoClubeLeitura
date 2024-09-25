@@ -16,33 +16,28 @@
 </head>
 
 <body>
-    <?= $this->section("content") ?>
 
     
     <nav>
 		<ul>
-			<li class="logo"><img alt="" src="https://i.postimg.cc/WzkCM20g/logo1.png"></li>
+			<li class="logo"><img alt="" src="/img/logonew.png"></li>
 			<li>
-				<a href="#"><i class="fa fa-home"></i>   home</a>
+				<a href="/membros"><i class="fa fa-home"></i> Membros</a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-book"></i>   about</a>
+				<a href="/livros"><i class="fa fa-book"></i> Livros</a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-users"></i>   Team</a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-picture-o"></i>   portfolio</a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-phone"></i>   contact</a>
+				<a href="/encontros"><i class="fa fa-users"></i> Encontros</a>
 			</li>
 		</ul>
 	</nav>
 	<div class="wrapper">
 		<div class="section">
 			<div class="box-area">
-				<h2 style="color: #2b2626">Homepage</h2>
+
+				<?= $this->section("content") ?>
+
 			</div>
 		</div>
 	</div>
