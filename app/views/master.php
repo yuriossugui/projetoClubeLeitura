@@ -36,7 +36,9 @@
 		<div class="section">
 			<div class="box-area">
 
-				<?= $this->section("content") ?>
+				<div style='margin-left:15vw;'>
+					<?= $this->section("content") ?>
+				</div>
 
 			</div>
 		</div>
