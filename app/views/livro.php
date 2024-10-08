@@ -6,10 +6,12 @@
 
 
 <div class="m-3">
-    <!-- gatilho do modal -->
-    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar Livro
-    </button>
+
+    <div class="d-flex justify-content-start mb-2">
+        <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#cadLivro">
+            Cadastrar Livro
+        </button>
+    </div>
     
     <div class="d-flex justify-content-center">
         <table class="table table-bordered table-hover text-center">
@@ -37,8 +39,8 @@
     </div>
     
     
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- cadastro de livro -->
+    <div class="modal fade" id="cadLivro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -65,4 +67,5 @@
         </div>
       </div>
     </div>
+
 </div>

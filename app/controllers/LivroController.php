@@ -9,4 +9,8 @@ class LivroController{
         Controller::view('livro');
     }
 
+    public function generoIndex(){
+        Controller::view('genero');
+    }
+
 }

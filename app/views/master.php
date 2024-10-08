@@ -19,7 +19,7 @@
   
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/dashboard">Clube da leitura</a>
+    <a class="navbar-brand">Clube da leitura</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,10 +35,14 @@
         </li>
          <!-- Fim -->
 
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="/livros" role="button"  aria-expanded="false">
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Livros
-          </a>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/genero">Gerenciar Gênero</a></li>
+            <li><a class="dropdown-item" href="/livros">Gerenciar Livro</a></li>
+        </ul>
         </li>
 
         <li class="nav-item dropdown">

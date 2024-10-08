@@ -7,7 +7,7 @@
 
 <div class="m-3">
     <!-- gatilho do modal -->
-    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#cadEncontro">
       Cadastrar Encontro
     </button>
     
@@ -36,7 +36,7 @@
     
     
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cadEncontro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -44,18 +44,25 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/membro" method="POST">
-                <label for="liv_titulo" class="form-label">Data</label>
-                <input type="text" class="form-control" id="liv_titulo" name="liv_titulo" required>
+            <form action="/encontros" method="POST">
+                <label for="enc_data" class="form-label">Data</label>
+                <input type="text" class="form-control" id="enc_data" name="enc_data" required>
 
-                <label for="liv_autor" class="form-label">Local</label>
-                <input type="text" class="form-control" id="liv_autor" name="liv_autor" required>
+                <label for="enc_local" class="form-label">Local</label>
+                <input type="text" class="form-control" id="enc_local" name="enc_local" required>
 
-                <label for="liv_genero" class="form-label">Livro Discutido</label>
-                <input type="text" class="form-control" id="liv_genero" name="liv_genero" required>
+                <label for="liv_titulo" class="form-label">Livro Discutido</label>
+                <select class="form-select" name="liv_titulo" id="">
+                    <option value="" default>Selecione uma opção</option>
+                    <option value="">Livro 1</option>
+                    <option value="">Livro 2</option>
+                    <option value="">Livro 3</option>
+                    <option value="">Livro 4</option>
+                </select>
 
-                <label for="participante" class="form-label">Participantes</label>
-                <select class="form-select" name="participante[]" id="participante">
+                <label for="mem_nome" class="form-label">Participantes</label>
+                <select class="form-select" name="mem_nome" id="mem_nome">
+                    <option value="" default>Selecione uma opção</option>
                     <option value="">Participante 1</option>
                     <option value="">Participante 2</option>
                     <option value="">Participante 3</option>
