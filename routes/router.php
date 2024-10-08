@@ -26,6 +26,8 @@ function load(string $controller, string $action)
 
 $router = [
   "GET" => [
+    '/encontros'=>fn()=>load('EncontroController','index'),
+    '/livros'=>fn()=>load('LivroController','index'),
     '/membros'=>fn()=>load('MembroController','index'),
     "/" => fn () => load("HomeController", "index"),
     "/contact" => fn () => load("ContactController", "index"),

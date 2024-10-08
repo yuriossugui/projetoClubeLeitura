@@ -1,33 +1,34 @@
 <?php $this->layout("master"); ?>
 
-
 <div class="d-flex justify-content-center mt-3">
-    <h2>Gerênciar Membros</h2>
+    <h2>Gerênciar Livros</h2>
 </div>
 
 
 <div class="m-3">
     <!-- gatilho do modal -->
     <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar Membro
+      Cadastrar Livro
     </button>
     
     <div class="d-flex justify-content-center">
         <table class="table table-bordered table-hover text-center">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Contato</th>
-                    <th>Livros Favoritos</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Gênero</th>
+                    <th>Número de páginas</th>
                     <th>Editar</th>
                     <th>Excluir</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Yuri</td>
-                    <td>18996851701</td>
                     <td>O Mundo de Sofia</td>
+                    <td>Soren Kierkegaard</td>
+                    <td>Filosofia</td>
+                    <td>377</td>
                     <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
                     <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
@@ -41,21 +42,21 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Membro</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Livro</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form action="/membro" method="POST">
-                <label for="mem_nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="mem_nome" name="mem_nome" required>
+                <label for="liv_titulo" class="form-label">Título</label>
+                <input type="text" class="form-control" id="liv_titulo" name="liv_titulo" required>
 
-                <label for="mem_contato" class="form-label">Contato</label>
-                <input type="text" class="form-control" id="mem_contato" name="mem_contato" required>
+                <label for="liv_autor" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="liv_autor" name="liv_autor" required>
 
-                <label for="mem_livro_favorito" class="form-label">Livro Favorito</label>
-                <input type="text" class="form-control" id="mem_livro_favorito" name="mem_nome" required>
+                <label for="liv_genero" class="form-label">Gênero</label>
+                <input type="text" class="form-control" id="liv_genero" name="liv_genero" required>
 
-                <button type="submit" class="btn btn-success mt-2">Cadastrar Membro</button>
+                <button type="submit" class="btn btn-success mt-2">Cadastrar Livro</button>
             </form>
           </div>
           <div class="modal-footer">

@@ -8,72 +8,68 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons (optional) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- css da sidebar -->
+   <link rel="stylesheet" href="/css/style.css">
   
   <style>
-    /* Custom sidebar styling */
-    .sidebar {
-      min-height: 100vh;
-      width: 250px;
-      background-color: #343a40;
-      padding-top: 20px;
-    }
-    .sidebar a {
-      color: #ddd;
-      font-size: 1.1em;
-      padding: 15px 20px;
-      display: block;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .sidebar a:hover {
-      background-color: #495057;
-      color: white;
-    }
-    .sidebar .active {
-      background-color: #495057;
-      color: white;
-    }
   </style>
+
 </head>
 <body>
-  <div class="d-flex">
-    <!-- Sidebar -->
-    <nav class="sidebar bg-dark">
-      <ul class="list-unstyled">
-        <li>
-          <a href="#" class="active">
-            <i class="bi bi-house-fill"></i> Home
+  
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/dashboard">Clube da leitura</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <!-- Após desenvolver o código em PHP, essa funcionalidade só será visível ao administrador -->
+         <!-- Início -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="/membros" role="button" aria-expanded="false">
+            Membros
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="bi bi-person-fill"></i> Profile
+         <!-- Fim -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="/livros" role="button"  aria-expanded="false">
+            Livros
           </a>
         </li>
-        <li>
-          <a href="/membros">
-            <i class="bi bi-gear-fill"></i> Settings
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="/encontros" role="button" aria-expanded="false">
+            Encontros
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class="bi bi-envelope-fill"></i> Messages
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="bi bi-box-arrow-right"></i> Logout
-          </a>
-        </li>
+
       </ul>
-    </nav>
-    
-    <!-- Page content -->
-    <div class="content p-4">
-      
+
+      <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seja bem vindo(a) Usuário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="editar_usuario.php">Editar dados</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
   </div>
+</nav>
 
+    <?= $this->section("content")?>
+  
+
+  <!-- ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
