@@ -9,8 +9,11 @@
   <!-- Bootstrap Icons (optional) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <!-- css da sidebar -->
-   <link rel="stylesheet" href="/css/style.css">
-  
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- chartjs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
   <style>
   </style>
 
