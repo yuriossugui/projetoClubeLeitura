@@ -29,14 +29,11 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
 
-        <!-- Após desenvolver o código em PHP, essa funcionalidade só será visível ao administrador -->
-         <!-- Início -->
         <li class="nav-item dropdown">
           <a class="nav-link" href="/membros" role="button" aria-expanded="false">
             Membros
           </a>
         </li>
-         <!-- Fim -->
 
          <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,7 +69,6 @@
 </nav>
 
     <?= $this->section("content")?>
-  
 
   <!-- ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
