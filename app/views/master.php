@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Sidebar</title>
+  <title>Clube da Leitura</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons (optional) -->
@@ -13,8 +13,10 @@
   <!-- chartjs -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <link rel="icon" href="/img/favicon.png" type="image/png">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
   </style>
 
 </head>
@@ -22,7 +24,7 @@
   
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand">Clube da leitura</a>
+    <a class="navbar-brand" style="font-family: 'Pacifico', cursive;">Clube da leitura</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
