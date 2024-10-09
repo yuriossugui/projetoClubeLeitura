@@ -13,7 +13,7 @@
   <!-- chartjs -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="icon" href="/img/favicon3.png" type="image/png">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -57,7 +57,7 @@
 
       <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">
                     Seja bem vindo(a) Usuário
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">

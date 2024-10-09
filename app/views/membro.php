@@ -1,5 +1,7 @@
 <?php $this->layout("master"); ?>
 
+<!-- css -->
+<link rel="stylesheet" href="/css/content.css">
 
 <div class="d-flex justify-content-center mt-3">
     <h2>Gerênciar Membros</h2>
@@ -13,7 +15,7 @@
     </button>
     
     <div class="d-flex justify-content-center">
-        <table class="table table-bordered table-hover text-center">
+        <table class="table table-bordered table-hover text-center" style="background-color:white">
             <thead>
                 <tr>
                     <th>Nome</th>

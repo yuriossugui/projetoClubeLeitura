@@ -1,5 +1,8 @@
 <?php $this->layout("master"); ?>
 
+<!-- css -->
+<link rel="stylesheet" href="/css/content.css">
+
 <div class="d-flex justify-content-center mt-3">
     <h2>Gerênciar Livros</h2>
 </div>

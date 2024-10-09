@@ -1,5 +1,7 @@
 <?php $this->layout("master"); ?>
 
+<link rel="stylesheet" href="/css/content.css">
+
 <div class="d-flex justify-content-center mt-3">
     <h2>Gerênciar Gênero</h2>
 </div>
