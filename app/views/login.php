@@ -25,9 +25,10 @@
                 <button type="submit" class="btn btn-success mt-2">Entrar</button>
             </form>
             <?php if(isset($msg)): ?>
-                <div card=>
-
+                <div class="card">
+                    <h3><?php echo $smg ?></h3>
                 </div>
+            <?php endif; ?>
         </div>
     </div>
 
