@@ -1,7 +1,6 @@
 <?php $this->layout("master"); ?>
 
-<link rel="stylesheet" href="/css/home.css">
-
+<link rel="stylesheet" href="/css/content.css">
 
 <div class="d-flex justify-content-center mt-5">
     <canvas id="dashboard"></canvas>

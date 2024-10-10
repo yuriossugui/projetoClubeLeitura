@@ -1,14 +1,3 @@
-<?php
-    session_start();
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        try{
-
-        }catch(Exception $e){
-            $e->getMessage();
-        }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +7,12 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="icon" href="/img/favicon3.png" type="image/png">
 
-
     <title>Clube da Leitura</title>
 </head>
 <body>
     <div class="d-flex justify-content-center" style="margin-top:20vh;">
         <div class="card p-3" style="width:25vw;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            <form action="" method="POST">
+            <form action="/login" method="POST">
                 <h3 class="text-center" style="font-family: 'Pacifico', cursive; color:#4287f5">Clube da Leitura</h3>
                 <br>
                 <input type="text" class="form-control" placeholder="Usuário" required>
