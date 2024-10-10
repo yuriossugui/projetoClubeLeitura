@@ -4,11 +4,6 @@ namespace app\db;
 
 use PDO;
 
-$host = 'localhost';
-$db = 'clubeLeitura';
-$user = 'root';
-$password = '';
-
 
 class Conexao
 {
