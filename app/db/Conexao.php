@@ -11,8 +11,8 @@ class Conexao
 
     function __construct()
     {
-        $dsn = 'mysql:host=' . $host . ';dbname=' . $db  . ';charset=utf8';
-        $this->db = new PDO($dsn, $user, $password);
+        $dsn = 'mysql:host=' . 'localhost' . ';dbname=' . 'clubeleitura'  . ';charset=utf8';
+        $this->db = new PDO($dsn, 'root', '');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
