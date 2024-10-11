@@ -19,16 +19,20 @@
                 <br>
                 <input type="password" class="form-control" name="usu_senha" placeholder="Senha" required>
                 <br>
-                <label for="recuperar_senha" style="font-weight: lighter;">Esqueceu a senha ?</label>
-                <input type="radio" value="">
-                <br>
-                <button type="submit" class="btn btn-success mt-2">Entrar</button>
-            </form>
-            <?php if(isset($msg)): ?>
-                <div class="card">
-                    <h3><?php echo $smg ?></h3>
+                <div class="text-center">
+                    <label for="recuperar_senha" style="font-weight: lighter;">Esqueceu a senha ?</label>
+                    <input type="radio" value="">
                 </div>
-            <?php endif; ?>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success mt-2">Entrar</button>
+                </div>
+            </form>
+            <?php if(isset($msg)):?>
+                <div class="card text-center mt-2" style="background-color:#FFCCCC;">
+                    <h5><?php echo $msg ?></h5>
+                </div>
+            <?php endif ?>
         </div>
     </div>
 

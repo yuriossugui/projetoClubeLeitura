@@ -1,6 +1,8 @@
 <?php
 require "../vendor/autoload.php";
 require "../routes/router.php";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
+$dotenv->load();
 
 try {
   $uri = parse_url($_SERVER["REQUEST_URI"])["path"];

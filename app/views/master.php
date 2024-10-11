@@ -1,3 +1,7 @@
+<?php use app\controllers\LoginController; 
+$login = new LoginController();
+$login->auth();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,11 +62,11 @@
       <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">
-                    Seja bem vindo(a) Usuário
+                    Seja bem vindo(a) <?php echo $login->pegaNome() ? $login->pegaNome() : 'Desconhecido' ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="editar_usuario.php">Editar dados</a></li>
-                    <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                    <li><a class="dropdown-item" href="/logout">Sair</a></li>
                 </ul>
             </li>
         </ul>

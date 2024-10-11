@@ -26,6 +26,7 @@ function load(string $controller, string $action)
 
 $router = [
   "GET" => [
+    '/logout'=>fn()=>load('LoginController','logout'),
     '/login'=>fn()=>load('LoginController','login'),
     '/genero'=>fn()=>load('LivroController','generoIndex'),
     '/encontros'=>fn()=>load('EncontroController','index'),
@@ -35,7 +36,7 @@ $router = [
     "/contact" => fn () => load("ContactController", "index"),
   ],
   "POST" => [
-    "/contact" => fn () => load("ContactController", "store"),
     '/login'=>fn()=>load('LoginController','validacao'),
+    "/contact" => fn () => load("ContactController", "store"),
   ],
 ];

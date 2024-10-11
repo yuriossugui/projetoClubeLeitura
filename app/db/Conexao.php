@@ -4,15 +4,14 @@ namespace app\db;
 
 use PDO;
 
-
 class Conexao
 {
     private $db;
 
     function __construct()
     {
-        $dsn = 'mysql:host=' . 'localhost' . ';dbname=' . 'clubeleitura'  . ';charset=utf8';
-        $this->db = new PDO($dsn, 'root', '');
+        $dsn = 'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['DB_NAME']  . ';charset=utf8';
+        $this->db = new PDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASSWORD']);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
