@@ -26,17 +26,18 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Yuri</td>
-                    <td>18996851701</td>
-                    <td>O Mundo de Sofia</td>
-                    <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
-                    <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
+              <?php foreach($membro as $m): ?>
+                <tr> 
+                  <td><?php echo $m['mem_nome']; ?></td>
+                  <td><?php echo $m['mem_contato']; ?></td>
+                  <td><?php echo $m['mem_livro_favorito']; ?></td>
+                  <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
+                  <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
+              <?php endforeach ?>  
             </tbody>
         </table>
     </div>
-    
     
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,7 +56,7 @@
                 <input type="text" class="form-control" id="mem_contato" name="mem_contato" required>
 
                 <label for="mem_livro_favorito" class="form-label">Livro Favorito</label>
-                <input type="text" class="form-control" id="mem_livro_favorito" name="mem_nome" required>
+                <input type="text" class="form-control" id="mem_livro_favorito" name="mem_livro_favorito" required>
 
                 <button type="submit" class="btn btn-success mt-2">Cadastrar Membro</button>
             </form>

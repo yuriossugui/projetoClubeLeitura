@@ -36,6 +36,7 @@ $router = [
     "/contact" => fn () => load("ContactController", "index"),
   ],
   "POST" => [
+    '/membro'=>fn()=>load('MembroController','store'),
     '/login'=>fn()=>load('LoginController','validacao'),
     "/contact" => fn () => load("ContactController", "store"),
   ],
