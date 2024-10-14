@@ -33,8 +33,8 @@
                   <td><?php echo $m['mem_nome']; ?></td>
                   <td><?php echo $m['mem_contato']; ?></td>
                   <td><?php echo $m['mem_livro_favorito']; ?></td>
-                  <td><a href="/editarMembro?membro_id=<?php echo $m['membro_id']?>" class="edit btn"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
-                  <td><a id="excluirMembro" class="trash btn" data-id="<?php echo $m['membro_id']?>"><ion-icon name="trash" size="large"></ion-icon></a></td>
+                  <td><a href="/editarMembro?membro_id=<?php echo $m['membro_id']?>"><button class="edit btn"><ion-icon name="create-outline" size="large"></ion-icon></button></a></td>
+                  <td><button class="trash btn btnExcluir" data-id="<?php echo $m['membro_id']; ?>"><ion-icon name="trash" size="large"></ion-icon></button></td>
                 </tr>
               <?php endforeach ?>  
             </tbody>
@@ -75,5 +75,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>  
+
 </div>

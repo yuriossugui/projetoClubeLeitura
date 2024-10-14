@@ -69,6 +69,18 @@ class MembroModel{
         return $stmt;
     }
 
-    
+    public function excluirMembro($membro_id)
+    {
+        $con = new Conexao();
+
+        $sql =  "DELETE FROM tb_membro WHERE membro_id = :membro_id";
+
+        $dic = [
+            ':membro_id'=>$membro_id
+        ];
+
+        $stmt = $con->delete($sql,$dic);
+        return $stmt;
+    }
 
 }

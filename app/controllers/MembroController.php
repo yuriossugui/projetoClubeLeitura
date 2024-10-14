@@ -22,8 +22,8 @@ class MembroController
         $model->insertMembro($params->mem_nome, $params->mem_contato, $params->mem_livro_favorito);
 
         $membro = $model->listaMembro();
-
-        Controller::view('membro', ['membro' => $membro]);
+        $msg = 'Membro cadastrado com  sucesso !';
+        Controller::view('membro', ['membro' => $membro, 'msg'=>$msg]);
     }
 
     public function editarMembroIndex($params)
@@ -39,13 +39,20 @@ class MembroController
     {
         $model = new MembroModel();
         $model->AlterarMembro($params->membro_id, $params->mem_nome, $params->mem_contato, $params->mem_livro_favorito);
-        $msg = 'Alteração feita com sucesso !';
 
         $membro = $model->listaMembro();
         $msg = 'Alteração feita com sucesso !';
         Controller::view('membro', ['membro' => $membro, 'msg' => $msg]);
     }
 
+    public function excluirMembro($params)
+    {
+        $model = new MembroModel();
+        $model->excluirMembro($params->membro_id);
 
-    
+        $membro = $model->listaMembro();
+        $msg = 'Membro excluido com sucesso !';
+        Controller::view('membro', ['membro' => $membro, 'msg' => $msg]);
+    }
+
 }

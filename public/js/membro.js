@@ -51,4 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    const botoesExcluir = document.querySelectorAll('.btnExcluir');
+
+    botoesExcluir.forEach(botao => {
+        botao.addEventListener('click', function() {
+            const membroId = this.getAttribute('data-id');
+            const confirmacao = window.confirm('Deseja realmente excluir este membro ?');
+    
+            if (confirmacao) {
+                window.location.href = `/excluirMembro?membro_id=${membroId}`;
+            }
+        });
+    });
+
 });
