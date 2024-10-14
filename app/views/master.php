@@ -65,8 +65,9 @@ $login->auth();
                     Seja bem vindo(a) <?php echo $login->pegaNome() ? $login->pegaNome() : 'Desconhecido' ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="editar_usuario.php">Editar dados</a></li>
+                    <li><a class="dropdown-item" href="editar_usuario.php">Editar dados</a></li>
                     <li><a class="dropdown-item" href="/logout">Sair</a></li>
+                    <li><a class="dropdown-item" href="/usuario">Cadastrar</a></li>
                 </ul>
             </li>
         </ul>
