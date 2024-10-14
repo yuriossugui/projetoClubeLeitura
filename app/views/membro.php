@@ -11,10 +11,19 @@
 
 
 <div class="m-3">
-    <!-- gatilho do modal -->
-    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar Membro
-    </button>
+    
+    <div class="d-flex justify-content-between mb-2">
+      <!-- gatilho do modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Cadastrar Membro
+      </button>
+
+      <?php if(isset($msg)): ?>
+        <div class="card msg">
+          <?php echo $msg ?>
+        </div>
+      <?php endif ?>
+    </div>
     
     <div class="d-flex justify-content-center">
         <table class="table table-bordered table-hover text-center" style="background-color:white">
@@ -39,13 +48,6 @@
               <?php endforeach ?>  
             </tbody>
         </table>
-    </div>
-    <div class="d-flex justify-content-center">
-      <?php if(isset($msg)): ?>
-        <div class="card p-2" style="background-color:#85ff87;width:fit-content">
-            <?php echo $msg; ?>
-        </div>
-      <?php endif ?>
     </div>
     
     <!-- Modal -->

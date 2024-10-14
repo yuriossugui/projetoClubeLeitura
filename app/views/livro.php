@@ -29,14 +29,16 @@
                 </tr>
             </thead>
             <tbody>
+              <?php foreach($livro as $l): ?>
                 <tr>
-                    <td>O Mundo de Sofia</td>
-                    <td>Soren Kierkegaard</td>
-                    <td>Filosofia</td>
-                    <td>377</td>
+                    <td><?= $l['liv_titulo'] ?></td>
+                    <td><?= $l['liv_autor'] ?></td>
+                    <td><?= $l['gen_nome'] ?></td>
+                    <td><?= $l['liv_numero_paginas'] ?></td>
                     <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
                     <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
+              <?php endforeach ?>
             </tbody>
         </table>
     </div>
@@ -51,15 +53,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/membro" method="POST">
+            <form action="/livro" method="POST">
                 <label for="liv_titulo" class="form-label">Título</label>
                 <input type="text" class="form-control" id="liv_titulo" name="liv_titulo" required>
 
                 <label for="liv_autor" class="form-label">Autor</label>
                 <input type="text" class="form-control" id="liv_autor" name="liv_autor" required>
 
-                <label for="liv_genero" class="form-label">Gênero</label>
-                <input type="text" class="form-control" id="liv_genero" name="liv_genero" required>
+                <label class="form-label" for="">Gênero</label>
+                <select class="form-select" aria-label="">
+                  <option selected>Selecione uma opção</option>
+                  <?php foreach($genero as $g): ?>
+                    <option value="<?= $g['gen_nome'] ?>"><?= $g['gen_nome'] ?></option>
+                  <?php endforeach ?>
+                </select>
+
+                <label for="liv_numero_paginas" class="form-label">Número de páginas</label>
+                <input type="number" class="form-control" id="liv_numero_paginas" name="liv_numero_paginas" required min="1">
 
                 <button type="submit" class="btn btn-success mt-2">Cadastrar Livro</button>
             </form>

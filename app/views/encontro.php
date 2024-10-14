@@ -21,6 +21,7 @@
                     <th>Data</th>
                     <th>Local</th>
                     <th>Livro Discutido</th>
+                    <th>Detalhes</th>
                     <th>Editar</th>
                     <th>Excluir</th>
                 </tr>
@@ -30,6 +31,7 @@
                     <td>08/10/2054</td>
                     <td>São Januário</td>
                     <td>O Manifesto Comunista</td>
+                    <td><a href=""><ion-icon name="search" size="large"></ion-icon></a></td>
                     <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
                     <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
