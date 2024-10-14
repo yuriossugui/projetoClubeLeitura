@@ -2,6 +2,8 @@
 
 <!-- css -->
 <link rel="stylesheet" href="/css/content.css">
+<!-- js -->
+<script src="/js/membro.js"></script>
 
 <div class="d-flex justify-content-center mt-3">
     <h2>Gerênciar Membros</h2>
@@ -18,7 +20,7 @@
         <table class="table table-bordered table-hover text-center" style="background-color:white">
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th>Usuário</th>
                     <th>Contato</th>
                     <th>Livros Favoritos</th>
                     <th>Editar</th>
@@ -48,15 +50,15 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/membro" method="POST">
-                <label for="mem_nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="mem_nome" name="mem_nome" required>
+            <form action="/membro" method="POST" id="cadMembro">
+                <label for="mem_nome" class="form-label">Usuário</label>
+                <input type="text" class="form-control" id="mem_nome" name="mem_nome" id="mem_nome" required>
 
                 <label for="mem_contato" class="form-label">Contato</label>
-                <input type="text" class="form-control" id="mem_contato" name="mem_contato" required>
+                <input type="text" class="form-control" id="mem_contato" name="mem_contato" id="mem_contato" required>
 
                 <label for="mem_livro_favorito" class="form-label">Livro Favorito</label>
-                <input type="text" class="form-control" id="mem_livro_favorito" name="mem_livro_favorito" required>
+                <input type="text" class="form-control" id="mem_livro_favorito" name="mem_livro_favorito" id="mem_livro_favorito" required>
 
                 <button type="submit" class="btn btn-success mt-2">Cadastrar Membro</button>
             </form>

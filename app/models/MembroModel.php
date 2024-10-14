@@ -12,7 +12,7 @@ class MembroModel{
 
         $sql = 'SELECT * FROM tb_membro';
 
-        $map = [];        
+        $map = [];
 
         $stmt = $con->select($sql,$map);
         return $stmt;

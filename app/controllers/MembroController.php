@@ -21,4 +21,5 @@ class MembroController{
 
         Controller::view('membro',['membro'=>$membro]);
     }
+    
 }
