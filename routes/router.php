@@ -32,13 +32,16 @@ $router = [
     '/genero'=>fn()=>load('LivroController','generoIndex'),
     '/encontros'=>fn()=>load('EncontroController','index'),
     '/livros'=>fn()=>load('LivroController','index'),
+    '/editarMembro'=>fn()=>load('MembroController','editarMembroIndex'),
     '/membros'=>fn()=>load('MembroController','index'),
     "/" => fn () => load("HomeController", "index"),
     "/contact" => fn () => load("ContactController", "index"),
   ],
   "POST" => [
+    '/editarMembro'=>fn()=>load('MembroController','AlterarMembro'),
     '/membro'=>fn()=>load('MembroController','store'),
     '/login'=>fn()=>load('LoginController','validacao'),
     "/contact" => fn () => load("ContactController", "store"),
+    "/ex" =>fn()=>load('MembroController','delete')
   ],
 ];

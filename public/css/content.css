@@ -16,3 +16,11 @@ canvas{
     padding: 10px;
     display: block;
 }
+
+.trash{
+    color:red;
+}
+
+.edit{
+    color:#ffc400;
+}

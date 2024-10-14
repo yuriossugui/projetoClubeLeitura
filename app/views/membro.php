@@ -33,12 +33,19 @@
                   <td><?php echo $m['mem_nome']; ?></td>
                   <td><?php echo $m['mem_contato']; ?></td>
                   <td><?php echo $m['mem_livro_favorito']; ?></td>
-                  <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
-                  <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
+                  <td><a href="/editarMembro?membro_id=<?php echo $m['membro_id']?>" class="edit btn"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
+                  <td><a id="excluirMembro" class="trash btn" data-id="<?php echo $m['membro_id']?>"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
               <?php endforeach ?>  
             </tbody>
         </table>
+    </div>
+    <div class="d-flex justify-content-center">
+      <?php if(isset($msg)): ?>
+        <div class="card p-2" style="background-color:#85ff87;width:fit-content">
+            <?php echo $msg; ?>
+        </div>
+      <?php endif ?>
     </div>
     
     <!-- Modal -->

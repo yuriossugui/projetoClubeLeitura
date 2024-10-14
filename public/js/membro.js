@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return /^[a-zA-Z]+$/.test(value);
     }, "Por favor, insira apenas letras.");
 
-    // Adicionando a regra personalizada para o formato de telefone brasileiro
+    // Adicionando a regra personalizada para o formato de telefone brasileiro sem parênteses e hífen
     $.validator.addMethod("telefone", function(value, element) {
-        return this.optional(element) || /^\(\d{2}\)\d{5}-?\d{4}$/.test(value);
-    }, "Por favor, insira um número de telefone válido no formato (XX)XXXXX-XXXX.");
+        return this.optional(element) || /^\d{11}$/.test(value);
+    }, "Por favor, insira um número de telefone válido com 11 dígitos (incluindo o DDD).");
 
     $("#cadMembro").validate({
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 
             mem_livro_favorito: {
-                required: "O campo livro favorito é obrigatório !",
+                required: "O campo Livro Favorito é obrigatório !",
                 maxlength: "O usuário não pode ter mais de 255 digitos !",
             }
         }

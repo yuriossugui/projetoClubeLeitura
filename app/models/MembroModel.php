@@ -38,4 +38,37 @@ class MembroModel{
         $stmt = $con->insert($sql,$dic);
         return $stmt;
     }
+
+    public function selectMembro($membro_id){
+        $con = new Conexao();
+
+        $sql = "SELECT * FROM tb_membro WHERE membro_id = :membro_id";
+
+        $dic = [
+            ':membro_id'=>$membro_id
+        ];
+
+        $stmt = $con->select($sql,$dic);
+        return $stmt;
+    }
+
+    public function AlterarMembro($membro_id,$mem_nome,$mem_contato,$mem_livro_favorito){
+        $con = new Conexao();
+
+        $sql = "UPDATE tb_membro SET mem_nome = :mem_nome, mem_contato = :mem_contato, mem_livro_favorito = :mem_livro_favorito
+        WHERE membro_id = :membro_id";
+
+        $dic = [
+            ':mem_nome' => $mem_nome,
+            ':mem_contato'=>$mem_contato,
+            ':mem_livro_favorito'=>$mem_livro_favorito,
+            ':membro_id'=>$membro_id
+        ];
+
+        $stmt = $con->update($sql,$dic);
+        return $stmt;
+    }
+
+    
+
 }
