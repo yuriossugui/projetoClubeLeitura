@@ -35,8 +35,8 @@
                     <td><?= $l['liv_autor'] ?></td>
                     <td><?= $l['gen_nome'] ?></td>
                     <td><?= $l['liv_numero_paginas'] ?></td>
-                    <td><a href="/editarMembro"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
-                    <td><a href="/excluirMembro"><ion-icon name="trash" size="large"></ion-icon></a></td>
+                    <td><a href="/editarLivro?livro_id=<?= $l['livro_id'] ?>"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
+                    <td><a href="/excluirMembro?livro_id=<?= $l['livro_id'] ?>"><ion-icon name="trash" size="large"></ion-icon></a></td>
                 </tr>
               <?php endforeach ?>
             </tbody>
