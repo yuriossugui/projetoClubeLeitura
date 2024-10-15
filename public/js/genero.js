@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    //regra para apenas letras
+    $.validator.addMethod("apenasLetras", function(value, element) {
+        return /^[a-zA-ZÀ-ÿ\u00C0-\u00FF]+$/.test(value);
+    },);
+
     $("#cadGeneroForm").validate({
         
         rules: {
 
             gen_nome: {
                 required: true,
-                maxlength: 50
+                maxlength: 50,
+                apenasLetras: true
             }
 
         },
@@ -15,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             gen_nome: {
                 required: 'Este campo é obrigatório !',
-                maxlength: 'O gênero deve ter no máximo 50 caracteres !'
+                maxlength: 'O gênero deve ter no máximo 50 caracteres !',
+                apenasLetras: "Por favor, insira apenas letras."
             },
 
         }

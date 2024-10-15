@@ -61,10 +61,10 @@
                 <input type="text" class="form-control" id="liv_autor" name="liv_autor" required>
 
                 <label class="form-label" for="">Gênero</label>
-                <select class="form-select" aria-label="">
+                <select class="form-select" aria-label="" name="genero_id">
                   <option selected>Selecione uma opção</option>
                   <?php foreach($genero as $g): ?>
-                    <option value="<?= $g['gen_nome'] ?>"><?= $g['gen_nome'] ?></option>
+                    <option value="<?= $g['genero_id'] ?>"><?= $g['gen_nome'] ?></option>
                   <?php endforeach ?>
                 </select>
 
