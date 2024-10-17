@@ -37,4 +37,43 @@
             return $stmt;
         }
 
+        public function selectLivro($livro_id){
+
+            $con = new Conexao();
+    
+            $sql = "SELECT * FROM tb_livro 
+            INNER JOIN tb_genero ON tb_livro.genero_id = tb_genero.genero_id 
+            WHERE livro_id = :livro_id";
+    
+            $dic = [
+                ':livro_id'=>$livro_id
+            ];
+    
+            $stmt = $con->select($sql,$dic);
+            return $stmt;
+        }
+
+        public function updateLivro($liv_titulo,$liv_autor,$liv_numero_paginas,$genero_id,$livro_id){
+            $con = new Conexao();
+    
+            $sql = "UPDATE tb_livro SET 
+            liv_titulo = :liv_titulo, 
+            liv_autor = :liv_autor,
+            liv_numero_paginas = :liv_numero_paginas,
+            genero_id = :genero_id   
+            WHERE livro_id = :livro_id
+            ";
+    
+            $dic = [
+                ':liv_titulo' => $liv_titulo,
+                ':liv_autor' => $liv_autor,
+                ':liv_numero_paginas'=>$liv_numero_paginas,
+                ':genero_id' => $genero_id,
+                ':livro_id'=>$livro_id
+            ];
+    
+            $stmt = $con->update($sql,$dic);
+            return $stmt;
+        }
+
     }

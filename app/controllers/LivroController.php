@@ -23,4 +23,24 @@ class LivroController{
         Controller::view('livro',['msg'=>$msg]);
     }
 
+    public function editar($params){
+        $model = new LivroModel();
+        $livro = $model->selectLivro($params->livro_id);
+        $modelGenero = new GeneroModel();
+        $genero = $modelGenero->listarGenero(); 
+
+        Controller::view('editarLivro',['livro'=>$livro,'genero'=>$genero]);
+    }
+
+    public function updateLivro($params){
+        $model = new LivroModel();
+        $model->updateLivro($params->liv_titulo, $params->liv_autor, $params->liv_numero_paginas, $params->genero_id, $params->livro_id);
+        
+        $livro = $model->listaLivro();
+        $modelGenero = new GeneroModel();
+        $genero = $modelGenero->listarGenero(); 
+
+        Controller::view('livro',['livro'=>$livro,'genero'=>$genero]);
+    }
+
 }

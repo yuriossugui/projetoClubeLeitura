@@ -33,6 +33,7 @@ $router = [
     '/editarGenero'=>fn()=>load('GeneroController','selectGenero'),
     '/genero'=>fn()=>load('GeneroController','generoIndex'),
     '/encontros'=>fn()=>load('EncontroController','index'),
+    '/editarLivro'=>fn()=>load('LivroController','editar'),
     '/livros'=>fn()=>load('LivroController','index'),
     '/excluirMembro'=>fn()=>load('MembroController','excluirMembro'),
     '/editarMembro'=>fn()=>load('MembroController','editarMembroIndex'),
@@ -40,6 +41,7 @@ $router = [
     "/" => fn () => load("HomeController", "index"),
   ],
   "POST" => [
+    '/editarLivro'=>fn()=>load('LivroController','updateLivro'),
     '/livro'=>fn()=>load('livroController','store'),
     '/editarGenero'=>fn()=>load('GeneroController','updateGenero'),
     '/genero'=>fn()=>load('GeneroController','insertGenero'),

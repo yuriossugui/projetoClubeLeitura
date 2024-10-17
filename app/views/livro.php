@@ -2,6 +2,8 @@
 
 <!-- css -->
 <link rel="stylesheet" href="/css/content.css">
+<!-- js -->
+<script src="/js/livro.js"></script>
 
 <div class="d-flex justify-content-center mt-3">
     <h2>Gerênciar Livros</h2>
@@ -35,9 +37,9 @@
                     <td><?= $l['liv_autor'] ?></td>
                     <td><?= $l['gen_nome'] ?></td>
                     <td><?= $l['liv_numero_paginas'] ?></td>
-                    <td><a href="/editarLivro?livro_id=<?= $l['livro_id'] ?>"><ion-icon name="create-outline" size="large"></ion-icon></a></td>
-                    <td><a href="/excluirMembro?livro_id=<?= $l['livro_id'] ?>"><ion-icon name="trash" size="large"></ion-icon></a></td>
-                </tr>
+                    <td><a href="/editarLivro?livro_id=<?= $l['livro_id']?>"><button class="edit btn"><ion-icon name="create-outline" size="large"></ion-icon></button></a></td>
+                    <td><button class="trash btn btnExcluir" data-id="<?= $l['livro_id']; ?>"><ion-icon name="trash" size="large"></ion-icon></button></td>
+                    </tr>
               <?php endforeach ?>
             </tbody>
         </table>
