@@ -76,4 +76,17 @@
             return $stmt;
         }
 
+        public function deleteLivro($livro_id){
+            $con = new Conexao();
+    
+            $sql = "DELETE FROM tb_livro WHERE livro_id = :livro_id";
+    
+            $dic = [
+                ':livro_id'=>$livro_id
+            ];
+    
+            $stmt = $con->delete($sql,$dic);
+            return $stmt;
+        }
+
     }

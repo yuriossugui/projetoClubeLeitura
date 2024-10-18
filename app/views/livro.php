@@ -12,10 +12,15 @@
 
 <div class="m-3">
 
-    <div class="d-flex justify-content-start mb-2">
+    <div class="d-flex justify-content-between mb-2">
         <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#cadLivro">
             Cadastrar Livro
         </button>
+        <?php if(isset($msg)): ?>
+          <div class="card p-2 msg">
+              <?= $msg ?>
+          </div>
+        <?php endif ?>
     </div>
     
     <div class="d-flex justify-content-center">
@@ -55,7 +60,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/livro" method="POST">
+            <form action="/livro" method="POST" id="cadLivro">
                 <label for="liv_titulo" class="form-label">Título</label>
                 <input type="text" class="form-control" id="liv_titulo" name="liv_titulo" required>
 
