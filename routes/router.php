@@ -26,13 +26,14 @@ function load(string $controller, string $action)
 
 $router = [
   "GET" => [
+    '/cadEncontroMembros'=>fn()=>load('EncontroController','cadEncontroMembros'),
     '/usuario'=>fn()=>load('UsuarioController','index'),
     '/logout'=>fn()=>load('LoginController','logout'),
     '/login'=>fn()=>load('LoginController','login'),
     '/excluirGenero'=>fn()=>load('GeneroController','deleteGenero'),
     '/editarGenero'=>fn()=>load('GeneroController','selectGenero'),
     '/genero'=>fn()=>load('GeneroController','generoIndex'),
-    '/encontros'=>fn()=>load('EncontroController','index'),
+    '/cadEncontro'=>fn()=>load('EncontroController','cadEncontro'),
     '/editarLivro'=>fn()=>load('LivroController','editar'),
     '/excluirLivro'=>fn()=>load('LivroController','deleteLivro'),
     '/livros'=>fn()=>load('LivroController','index'),
@@ -42,7 +43,7 @@ $router = [
     "/" => fn () => load("HomeController", "index"),
   ],
   "POST" => [
-    '/encontros'=>fn()=>load('EncontroController','insertEncontro'),
+    '/cadEncontro'=>fn()=>load('EncontroController','insertEncontro'),
     '/editarLivro'=>fn()=>load('LivroController','updateLivro'),
     '/livro'=>fn()=>load('livroController','store'),
     '/editarGenero'=>fn()=>load('GeneroController','updateGenero'),

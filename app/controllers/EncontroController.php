@@ -3,18 +3,29 @@ namespace app\controllers;
 
 use app\controllers\Controller;
 use app\models\EncontroModel;
+use app\models\LivroModel;
+use app\models\MembroModel;
 
 class EncontroController{
-    
-    public function index(){
-        Controller::view('encontro');
+
+    public function cadEncontro(){
+
+        $livroModel = new LivroModel();
+        $membroModel = new MembroModel();
+
+        $livro = $livroModel->listaLivro();
+        $membro = $membroModel->listaMembro();
+
+        Controller::view('CadEncontro',['livro'=>$livro,'membro'=>$membro]);
+
     }
 
-    public function insertEncontro($params){
-        $model = new EncontroModel();
-        $model->insertEncontro($params->enc_data,$params->enc_local,$params->liv_titulo,$params->membro_id);
+    public function cadEncontroMembros(){
+        $membroModel = new MembroModel();
+        $membro = $membroModel->listaMembro();
 
-        Controller::view('encontro');
+        Controller::view('cadEncontroMembros',['membro'=>$membro]);
     }
+
 
 }

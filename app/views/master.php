@@ -41,7 +41,7 @@ $login->auth();
           </a>
         </li>
 
-         <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Livros
         </a>
@@ -52,9 +52,13 @@ $login->auth();
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link" href="/encontros" role="button" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Encontros
-          </a>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/cadEncontro">Agendar Encontro</a></li>
+            <li><a class="dropdown-item" href="/verEncontro">Ver Encontros</a></li>
+        </ul>
         </li>
 
       </ul>
